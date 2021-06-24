@@ -1,6 +1,27 @@
 <template>
   <div id="app">
-
+    <div class="calculator">
+      <div class="display"></div>
+      <div class="btn operator">Clear</div>
+      <div class="btn operator">+/-</div>
+      <div class="btn operator">%</div>
+      <div class="btn operator">/</div>
+      <div class="btn">7</div>
+      <div class="btn">8</div>
+      <div class="btn">9</div>
+      <div class="btn operator">x</div>
+      <div class="btn">4</div>
+      <div class="btn">5</div>
+      <div class="btn">6</div>
+      <div class="btn operator">-</div>
+      <div class="btn">1</div>
+      <div class="btn">2</div>
+      <div class="btn">3</div>
+      <div class="btn operator">+</div>
+      <div class="zero btn">0</div>
+      <div class="btn operator">.</div>
+      <div class="btn operator">=</div>
+    </div>
   </div>
 </template>
 
@@ -18,7 +39,30 @@ export default {
 </script>
 
 <style>
-#app {
-  
+.calculator {
+  display: grid;
+  grid-template: repeat(4. 1fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.display {
+  grid-column: 1/5;
+  background-color: blue;
+}
+
+.zero {
+  grid-column: 1 / 3;
+}
+
+.btn {
+  background-color: #eee;
+  border: 1px solid #333;
+  text-align: center;
+  font-size: 2em;
+}
+
+.operator {
+  background-color: orange;
+  color: white
 }
 </style>
