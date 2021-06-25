@@ -41,7 +41,7 @@ export default {
     }, 
     sign() {
       this.current.charAt(0) === "-" ? 
-      this.current.clice(1) : `-${this.current}`
+      this.current.slice(1) : `-${this.current}`
     }, 
     percent() {
       this.current = `${parseFloat(this.current) / 100}`
